@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 import unittest
 
 
@@ -59,6 +60,26 @@ class PortfolioTests(unittest.TestCase):
         self.assertIn("seketika-puce.vercel.app", HTML)
         self.assertIn("github.com/nebukadnezarahmad/seketika", HTML)
         self.assertIn("web-desa-tegalrejo.vercel.app", HTML)
+
+    def test_embeddable_projects_use_live_iframes(self):
+        for url in (
+            "https://seketika-puce.vercel.app",
+            "https://web-desa-tegalrejo.vercel.app",
+            "https://mutawwifmu.com",
+            "https://youtz-attendance.vercel.app",
+        ):
+            self.assertIn(f'src="{url}"', HTML)
+        self.assertGreaterEqual(HTML.count("<iframe"), 4)
+
+    def test_sigap_uses_clickable_screenshot_fallback(self):
+        self.assertIn('src="assets/sigap-preview.jpg"', HTML)
+        self.assertIn("https://sigap-murex-seven.vercel.app", HTML)
+
+    def test_live_previews_have_accessible_titles(self):
+        iframe_tags = re.findall(r"<iframe\b[\s\S]*?</iframe>", HTML)
+        self.assertEqual(len(iframe_tags), 4)
+        for iframe in iframe_tags:
+            self.assertIn('title="Preview langsung', iframe)
 
 
 if __name__ == "__main__":
