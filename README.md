@@ -48,4 +48,5 @@ python3 -m unittest tests/test_portfolio.py -v
 ## Tautan
 
 - GitHub: <https://github.com/nebukadnezarahmad>
-- Live site: akan ditambahkan setelah GitHub Pages diaktifkan.
+- Live site: <https://nebukadnezarahmad.github.io/online-cv-portfolio/>
+- Repository: <https://github.com/nebukadnezarahmad/online-cv-portfolio>
