@@ -1,6 +1,6 @@
 # CV & Portofolio — Nebukadnezar Ahmad
 
-Website CV dan portofolio menggunakan **HTML5, CSS, dan JavaScript**. Tidak memerlukan framework atau proses build. JavaScript menambahkan filter proyek, navigasi ponsel, penanda bagian aktif, dan preview gambar.
+Website CV dan portofolio menggunakan **HTML5, CSS, dan JavaScript**. Tidak memerlukan framework atau proses build. JavaScript menambahkan filter proyek, navigasi ponsel, penanda bagian aktif, preview gambar, dan animasi scroll.
 
 - **Live website:** [nebukadnezarahmad.github.io/online-cv-portfolio](https://nebukadnezarahmad.github.io/online-cv-portfolio/)
 - **Repositori:** [github.com/nebukadnezarahmad/online-cv-portfolio](https://github.com/nebukadnezarahmad/online-cv-portfolio)
@@ -14,7 +14,9 @@ Profil dan foto, pengalaman kerja dan organisasi, pendidikan, hard skills dan so
 ```text
 index.html       # Struktur HTML semantik dan isi website
 styles.css       # Seluruh styling, layout, dan media queries
+cinematic.css    # Tampilan terang-gelap, proyek bergantian, dan layout scroll
 script.js        # Menu ponsel, filter proyek, navigasi aktif, dan dialog karya
+motion.js        # Pengalaman horizontal, penekanan kata, reveal, dan progress scroll
 assets/          # Foto, karya, favicon, CV DOCX, dan portofolio PDF
 demos/           # Preview dashboard hanya baca, HTML + CSS
 ```
@@ -49,12 +51,19 @@ Buka `index.html` langsung di browser, atau gunakan tautan GitHub Pages di atas.
 
 Struktur HTML, jalur aset, navigasi demo, tampilan responsif, dan pembatasan hanya baca diperiksa sebelum publikasi. Alat pengujian digunakan secara lokal dan tidak disertakan dalam repositori tugas.
 
+## Animasi scroll
+
+Pada desktop dengan pointer presisi, lebar minimal 1100px, dan tinggi minimal 700px, bagian pengalaman menetap di layar sementara enam kartu bergerak horizontal mengikuti scroll halaman. Tombol sebelumnya dan berikutnya tersedia. Ponsel, layar kecil, dan pengaturan pengurangan gerakan memakai tampilan pengalaman vertikal.
+
+Ringkasan profil menekankan kata mengikuti posisi scroll. Gerakan foto dibatasi, reveal berjalan sekali saat elemen masuk layar, dan penanda atas menunjukkan progres halaman. Scroll memakai perilaku browser; roda mouse dan sentuhan tidak dicegat. Seluruh informasi tetap tersedia ketika JavaScript dimatikan, termasuk tautan navigasi, proyek, dan unduhan.
+
 ## GitHub Pages
 
 Publikasi dari branch `main`, folder `/ (root)`, melalui **Settings → Pages → Deploy from a branch**. Sesudah commit didorong ke `main`, GitHub Pages memperbarui website otomatis.
 
 ## Referensi visual
 
+- [Iqmal](https://iqmal.dev/): referensi utama untuk transisi terang-gelap, penekanan teks, pengalaman horizontal, dan penyajian proyek bergantian.
 - [RyHar](https://ryhar.my.id/): hierarki profil, navigasi, dan susunan portofolio. Foto dan identitas visual mengikuti portofolio Nebukadnezar.
 - Versi sebelumnya website ini: riwayat pengalaman, pendidikan, prestasi, dan proyek digital.
 

@@ -8,8 +8,10 @@
   <meta name="theme-color" content="#f8fafc">
   <title>Nebukadnezar Ahmad | CV & Portofolio</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261012-studio">
-  <script src="script.js?v=20261012-studio" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261012-motion">
+  <link rel="stylesheet" href="cinematic.css?v=20261012-motion">
+  <script src="script.js?v=20261012-motion" defer></script>
+  <script src="motion.js?v=20261012-motion" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Lewati ke konten</a>
@@ -24,6 +26,7 @@
     </div>
   </header>
   <main id="main">
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
     <section class="hero container" id="tentang" aria-labelledby="profile-title">
       <div class="hero-copy">
         <p class="intro">Halo, saya Nezar <span aria-hidden="true">✦</span></p>
@@ -52,11 +55,12 @@
       <div><dt class="impact-title">OPPO Campus<br>Ambassador</dt><dd>OPPO Indonesia · 2026</dd></div>
       <div><dt class="impact-title">Student Ambassador<br>ITPLN</dt><dd>Institut Teknologi PLN · 2025</dd></div>
     </dl></div>
-    <section class="section container about" aria-labelledby="about-title">
-      <div><p class="eyebrow">Tentang saya</p><h2 id="about-title">Kuliah informatika,<br>bekerja di bidang kreatif.</h2></div>
+    <section class="section container about" id="ringkasan" aria-labelledby="about-title">
+      <div><p class="eyebrow">Tentang saya</p><h2 id="about-title">Kuliah informatika, <br>bekerja di bidang kreatif.</h2></div>
       <div class="about-copy"><p>Saya tertarik pada teknologi, fotografi, videografi, dan desain grafis. Di organisasi, saya mengurus desain publikasi, produksi konten, dan dokumentasi kegiatan.</p><p>Saya pernah mengelola media sosial untuk usaha otomotif di Palembang dan memimpin tim media di organisasi pelajar. Sekarang, saya kuliah di Institut Teknologi PLN sambil mengembangkan proyek website. Beberapa karya dan pengalaman saya bisa Anda lihat di halaman ini.</p><a class="text-link" href="assets/portofolio-nebukadnezar-ahmad.pdf" target="_blank" rel="noopener">Buka portofolio lengkap <span aria-hidden="true">↗</span></a></div>
     </section>
     <section class="section section-tinted" id="pengalaman" aria-labelledby="experience-title"><div class="container">
+      <div class="experience-scroll"><div class="experience-stage">
       <div class="section-heading"><div><p class="eyebrow">Pengalaman</p><h2 id="experience-title">Pekerjaan dan organisasi.</h2></div><p>Peran yang pernah saya jalani<br>dan hasil kerja bersama tim.</p></div>
       <div class="experience-layout">
         <div><h3 class="column-title">Pengalaman kerja</h3><div class="timeline">
@@ -70,6 +74,8 @@
           <article class="timeline-item"><p class="date">Desember 2023 – Desember 2024</p><h4>Head of Social Media Manager</h4><p class="organization">Youth Ranger Indonesia · Sumatera Selatan</p><p>Mengembangkan akun dari awal hingga 700+ pengikut dan mendukung pelaksanaan YRI EXPO X YRI FEST dengan 1.000+ peserta.</p></article>
         </div></div>
       </div>
+      <div class="experience-controls" hidden><button type="button" data-experience="previous" aria-label="Pengalaman sebelumnya">←</button><p class="experience-position" aria-live="polite" aria-atomic="true">1 / 6</p><button type="button" data-experience="next" aria-label="Pengalaman berikutnya">→</button><span>Scroll untuk melihat pengalaman</span></div>
+      </div></div>
       <details class="more-experience"><summary>Pengalaman organisasi &amp; kepanitiaan lainnya <span aria-hidden="true">+</span></summary><div class="additional-grid">
         <article><p class="date">Juli 2024 – Sekarang</p><h4>Wakil Ketua Umum Media Kreatif &amp; Publikasi</h4><p>Komunitas Pemuda Penggiat HAM Sumatera Selatan. Berkolaborasi dengan Kementerian Hukum dan HAM serta tim lintas divisi untuk edukasi HAM.</p></article>
         <article><p class="date">Juli 2024 – Juli 2025</p><h4>Departemen Kominfo</h4><p>Forum OSIS Sumatera Selatan. Mengelola dokumentasi, desain, dan publikasi kegiatan, termasuk LDBI tingkat provinsi.</p></article>
