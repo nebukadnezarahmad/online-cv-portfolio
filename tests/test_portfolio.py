@@ -61,25 +61,51 @@ class PortfolioTests(unittest.TestCase):
         self.assertIn("github.com/nebukadnezarahmad/seketika", HTML)
         self.assertIn("web-desa-tegalrejo.vercel.app", HTML)
 
-    def test_embeddable_projects_use_live_iframes(self):
-        for url in (
-            "https://seketika-puce.vercel.app",
-            "https://web-desa-tegalrejo.vercel.app",
-            "https://mutawwifmu.com",
-            "https://youtz-attendance.vercel.app",
-        ):
-            self.assertIn(f'src="{url}"', HTML)
-        self.assertGreaterEqual(HTML.count("<iframe"), 4)
+    def test_local_assets_and_fragment_targets_exist(self):
+        from html.parser import HTMLParser
+        from urllib.parse import unquote, urlsplit
 
-    def test_sigap_uses_clickable_screenshot_fallback(self):
-        self.assertIn('src="assets/sigap-preview.jpg"', HTML)
-        self.assertIn("https://sigap-murex-seven.vercel.app", HTML)
+        class References(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.references = []
+                self.ids = set()
 
-    def test_live_previews_have_accessible_titles(self):
-        iframe_tags = re.findall(r"<iframe\b[\s\S]*?</iframe>", HTML)
-        self.assertEqual(len(iframe_tags), 4)
-        for iframe in iframe_tags:
-            self.assertIn('title="Preview langsung', iframe)
+            def handle_starttag(self, tag, attrs):
+                attrs = dict(attrs)
+                if "id" in attrs:
+                    self.ids.add(attrs["id"])
+                for attr in ("href", "src"):
+                    if attr in attrs:
+                        self.references.append(attrs[attr])
+
+        parser = References()
+        parser.feed(HTML)
+        for value in parser.references:
+            url = urlsplit(value)
+            if url.scheme or url.netloc:
+                continue
+            if url.path:
+                self.assertTrue((ROOT / unquote(url.path)).is_file(), value)
+            elif url.fragment:
+                self.assertIn(url.fragment, parser.ids)
+
+    def test_contact_form_has_real_destination(self):
+        self.assertIn('action="mailto:nebukadnezarahmad2018@gmail.com?', HTML)
+        self.assertIn('enctype="text/plain"', HTML)
+        self.assertIn('aria-describedby="form-note"', HTML)
+        self.assertIn('id="form-note"', HTML)
+        self.assertNotIn('action="#"', HTML)
+
+    def test_photo_and_source_portfolio_are_present(self):
+        self.assertIn('src="assets/profile.webp"', HTML)
+        self.assertIn('href="assets/portofolio-nebukadnezar-ahmad.pdf"', HTML)
+        self.assertNotIn("portrait-placeholder", HTML)
+
+    def test_site_uses_only_html_and_external_css(self):
+        self.assertNotRegex(HTML, r"<script\b")
+        self.assertNotRegex(HTML, r"\son(?:click|submit|load)=")
+        self.assertIn("#skills", CSS)
 
 
 if __name__ == "__main__":

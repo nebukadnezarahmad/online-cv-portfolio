@@ -1,3 +1,5 @@
+> Arsip rancangan versi 7 Oktober 2026. Implementasi terbaru memakai foto asli dan karya dari dokumen portofolio, palet putih/biru, serta formulir mailto. Lihat README.md untuk spesifikasi yang berlaku.
+
 # Desain Online CV Nebukadnezar Ahmad
 
 ## Tujuan
