@@ -34,22 +34,26 @@ export default function AnimationShell({ children }: { children: ReactNode }) {
             0.35,
           )
           .from(
-            ".profile-visual",
+            ".portrait-entrance",
             { y: 70, rotation: 4, scale: 0.92, opacity: 0, duration: 1.35 },
             0.18,
           );
         if (desktop)
-          gsap.to(".profile-visual", {
-            y: -65,
-            rotation: -2.5,
-            ease: "none",
-            scrollTrigger: {
-              trigger: ".hero",
-              start: "top top",
-              end: "bottom top",
-              scrub: 0.7,
+          gsap.fromTo(
+            ".profile-visual",
+            { y: 0, rotation: 0 },
+            {
+              y: -65,
+              rotation: -2.5,
+              ease: "none",
+              scrollTrigger: {
+                trigger: ".hero",
+                start: "top top",
+                end: "bottom top",
+                scrub: 0.7,
+              },
             },
-          });
+          );
         gsap.to(".reading-progress span", {
           scaleX: 1,
           ease: "none",
@@ -68,10 +72,10 @@ export default function AnimationShell({ children }: { children: ReactNode }) {
             stagger: 0.075,
             ease: "none",
             scrollTrigger: {
-              trigger: ".summary-words",
-              start: "top 82%",
-              end: "bottom 35%",
-              scrub: 0.45,
+              trigger: ".about-copy > p:first-child",
+              start: "top 95%",
+              end: "center 55%",
+              scrub: 0.2,
             },
           },
         );
@@ -81,21 +85,28 @@ export default function AnimationShell({ children }: { children: ReactNode }) {
           scrollTrigger: {
             trigger: ".skill-ribbon",
             start: "top bottom",
-            end: "bottom top",
-            scrub: 0.8,
+            end: "center center",
+            scrub: 0.2,
           },
         });
         const reveals = element.querySelectorAll<HTMLElement>(
           ".section-heading:not(#pengalaman .section-heading), .education-card, .skills-grid > article, .work-card, .award-list > article, .contact-intro",
         );
-        reveals.forEach((target, index) => {
+        reveals.forEach((target) => {
           gsap.from(target, {
             y: desktop ? 60 : 28,
             opacity: 0.55,
-            duration: 0.95,
-            delay: (index % 2) * 0.06,
-            ease: "power3.out",
-            scrollTrigger: { trigger: target, start: "top 91%", once: true },
+            ease: "none",
+            scrollTrigger: {
+              trigger: target,
+              start: "top 95%",
+              end: "center 55%",
+              scrub: 0.2,
+              once: true,
+              onLeave: (self) => {
+                self.animation?.progress(1);
+              },
+            },
           });
         });
         const imageContainers =
@@ -111,17 +122,25 @@ export default function AnimationShell({ children }: { children: ReactNode }) {
                 scrollTrigger: {
                   trigger: target,
                   start: "top bottom",
-                  end: "bottom center",
-                  scrub: 0.6,
+                  end: "center 55%",
+                  scrub: 0.2,
                 },
               },
             ),
           );
         gsap.from(".contact-intro h2", {
           y: 48,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: { trigger: "#kontak", start: "top 75%", once: true },
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".contact-intro h2",
+            start: "top 95%",
+            end: "center 55%",
+            scrub: 0.2,
+            once: true,
+            onLeave: (self) => {
+              self.animation?.progress(1);
+            },
+          },
         });
       },
       root,
@@ -142,6 +161,7 @@ export default function AnimationShell({ children }: { children: ReactNode }) {
       if (mounted) ScrollTrigger.refresh();
     };
     window.addEventListener("load", refresh, { once: true });
+    element.addEventListener("toggle", refresh, true);
     document.fonts.ready.then(refresh);
     const timer = setTimeout(refresh, 300);
     return () => {
@@ -150,6 +170,7 @@ export default function AnimationShell({ children }: { children: ReactNode }) {
       media.revert();
       element.removeEventListener("focusin", focus);
       window.removeEventListener("load", refresh);
+      element.removeEventListener("toggle", refresh, true);
     };
   }, []);
   return <div ref={root}>{children}</div>;

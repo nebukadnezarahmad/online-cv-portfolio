@@ -13,30 +13,45 @@
 .flow-background {
   position: fixed;
   inset: 0;
-  z-index: 8;
+  z-index: 1;
   overflow: hidden;
   pointer-events: none;
   user-select: none;
-  opacity: 0.2;
+  opacity: 0.34;
 }
 .flow-background svg {
   width: 100%;
   height: 100%;
 }
-.profile-visual,
-.website-preview {
-  z-index: 9;
+.hero-copy,
+.portrait-entrance,
+.impact-grid,
+.about > div,
+.experience-stage,
+.more-experience,
+.section-heading,
+.education-grid,
+.skills-grid,
+.website-intro,
+.project-toolbar,
+.website-grid,
+.work-grid,
+.award-list,
+.contact-layout,
+footer.container {
+  position: relative;
+  z-index: 2;
 }
 .flow-outline {
   stroke: url(#flow-palette);
-  stroke-width: 1.5;
-  opacity: 0.5;
+  stroke-width: 2;
+  opacity: 0.65;
 }
 .flow-current {
   stroke: #b8a6ad;
-  stroke-width: 2.5;
+  stroke-width: 3;
   stroke-dasharray: 34 120;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .flow-draw {
   stroke: url(#flow-palette);
@@ -50,7 +65,7 @@
 }
 @media (max-width: 760px) {
   .flow-background {
-    opacity: 0.13;
+    opacity: 0.24;
   }
 }
 @media (prefers-reduced-motion: reduce) {

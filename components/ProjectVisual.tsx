@@ -24,8 +24,8 @@ export default function ProjectVisual({ children }: { children: ReactNode }) {
             scrollTrigger: {
               trigger: target,
               start: "top 95%",
-              end: "top 30%",
-              scrub: 0.6,
+              end: "center 55%",
+              scrub: 0.2,
             },
           },
         );

@@ -3,10 +3,10 @@
 import { motion, useScroll, useTransform } from "motion/react";
 
 export default function FlowBackground() {
-  const { scrollYProgress } = useScroll();
-  const drift = useTransform(scrollYProgress, [0, 1], [-80, 80]);
-  const counterDrift = useTransform(scrollYProgress, [0, 1], [60, -60]);
-  const dash = useTransform(scrollYProgress, [0, 1], [0, -1800]);
+  const { scrollY, scrollYProgress } = useScroll();
+  const drift = useTransform(scrollY, (y) => Math.sin(y / 600) * 110);
+  const counterDrift = useTransform(scrollY, (y) => Math.sin(y / 700) * -90);
+  const dash = useTransform(scrollY, (y) => -y * 1.6);
   const draw = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
   return (
     <div className="flow-background" aria-hidden="true">

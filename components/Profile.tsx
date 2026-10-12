@@ -68,34 +68,36 @@ export default function Profile() {
             </div>
           </div>
         </div>
-        <figure className="profile-visual">
-          <div className="portrait-circle">
-            <Image
-              src={asset("assets/pas-foto-nebukadnezar.png")}
-              width={860}
-              height={1152}
-              alt="Pas foto Nebukadnezar Ahmad mengenakan jas hitam dan dasi"
-              priority
-            />
-          </div>
-          <figcaption>
-            <span className="photo-caption">
-              Mahasiswa Teknik Informatika
-              <br />
-              Institut Teknologi PLN.
-            </span>
-            <span className="profile-location">
-              <span aria-hidden="true">⌖</span> Sumatera Selatan, Indonesia
-            </span>
-          </figcaption>
-          <div className="portrait-note">
-            <span aria-hidden="true">✦</span>
-            <div>
-              Desain dan media sosial
-              <small>Chief Creative · Youth Ranger Indonesia</small>
+        <div className="portrait-entrance">
+          <figure className="profile-visual">
+            <div className="portrait-circle">
+              <Image
+                src={asset("assets/pas-foto-nebukadnezar.png")}
+                width={860}
+                height={1152}
+                alt="Pas foto Nebukadnezar Ahmad mengenakan jas hitam dan dasi"
+                priority
+              />
             </div>
-          </div>
-        </figure>
+            <figcaption>
+              <span className="photo-caption">
+                Mahasiswa Teknik Informatika
+                <br />
+                Institut Teknologi PLN.
+              </span>
+              <span className="profile-location">
+                <span aria-hidden="true">⌖</span> Sumatera Selatan, Indonesia
+              </span>
+            </figcaption>
+            <div className="portrait-note">
+              <span aria-hidden="true">✦</span>
+              <div>
+                Desain dan media sosial
+                <small>Chief Creative · Youth Ranger Indonesia</small>
+              </div>
+            </div>
+          </figure>
+        </div>
       </section>
       <div className="impact-band">
         <dl className="container impact-grid">
