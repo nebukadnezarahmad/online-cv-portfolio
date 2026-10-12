@@ -1,18 +1,20 @@
+import TopLink from "@/components/TopLink";
+
 export default function Footer() {
   return (
-    <>
-      <footer className="container">
+    <footer className="site-footer">
+      <div className="container footer-inner">
         <div>
-          <a className="brand" href="#top">
+          <TopLink className="brand">
             Nebukadnezar<span>.</span>
-          </a>
+          </TopLink>
           <p>© 2026 Nebukadnezar Ahmad</p>
         </div>
         <p>CV dan portofolio pribadi.</p>
-        <a className="back-top" href="#top">
+        <TopLink className="back-top">
           Kembali ke atas ↑
-        </a>
-      </footer>
-    </>
+        </TopLink>
+      </div>
+    </footer>
   );
 }

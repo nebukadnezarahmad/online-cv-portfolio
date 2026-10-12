@@ -50,9 +50,24 @@
 .work-grid,
 .award-list,
 .contact-layout,
-footer.container {
+.site-footer {
   position: relative;
   z-index: 2;
+}
+.site-footer {
+  display: block;
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+@media (max-width: 760px) {
+  .footer-inner { flex-wrap: wrap; }
+  .footer-inner > p { order: 3; width: 100%; }
 }
 @media (max-width: 760px) {
   .flow-background { opacity: .65; }

@@ -146,7 +146,7 @@ export const projects = [
       "Dashboard yang saya buat untuk membantu pekerjaan di Student Worker ITPLN, mulai dari pengelolaan kegiatan hingga kalender konten dan analitik organisasi.",
     note: "Tanpa password · data contoh. Menu dan scroll aktif; pengisian serta perubahan data tidak tersedia.",
     address: "student-worker-dashboard.vercel.app",
-    preview: "demos/student-worker/index.html#event",
+    preview: "demos/student-worker/index.html",
     demo: true,
     links: [
       {

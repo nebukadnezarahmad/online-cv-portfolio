@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import TopLink from "@/components/TopLink";
 
 const links = [
   ["tentang", "Profil"],
@@ -64,15 +65,14 @@ export default function Navigation() {
     </a>
   ));
   return (
-    <header ref={header} className="site-header" id="top">
+    <header ref={header} className="site-header">
       <div className="container header-inner">
-        <a
+        <TopLink
           className="brand"
-          href="#top"
           aria-label="Nebukadnezar Ahmad, beranda"
         >
           Nebukadnezar<span>.</span>
-        </a>
+        </TopLink>
         <nav
           id="main-nav"
           className="desktop-navigation"

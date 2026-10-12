@@ -32,9 +32,10 @@ main{flex:1;min-width:0}
 .content{padding:26px;max-width:1220px}
 .panel{display:none;scroll-margin-top:12px;outline:none}
 .panel:target{display:block}
-.panel:first-child{display:block}
-.app:has(.panel:target) .panel:first-child:not(:target){display:none}
-.app:has(.panel:target) .nav-dashboard{background:transparent;color:var(--ink-2);font-weight:500}
+.panel#event{display:block}
+.app:has(.panel:target) .panel#event:not(:target){display:none}
+.app .nav-dashboard{background:transparent;color:var(--ink-2);font-weight:500}
+.app:not(:has(.panel:target)) .nav-event{background:var(--wash);color:var(--deep);font-weight:650}
 .section-head{margin-bottom:22px}
 .section-head p{font-size:13px;max-width:78ch;margin-bottom:0}
 .hero{padding:5px 0 16px}

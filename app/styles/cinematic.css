@@ -314,7 +314,7 @@
   color: var(--ink);
 }
 body:has(#kontak) footer {
-  background: white;
+  background: var(--paper);
 }
 /* Satu sistem reveal menggantikan timeline CSS sebelumnya. */
 .section-heading,
