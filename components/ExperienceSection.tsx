@@ -215,10 +215,17 @@ export default function ExperienceSection() {
               <ExperienceControls />
             </div>
           </div>
-          <details className="more-experience">
+          <details className="more-experience" open>
             <summary>
-              Pengalaman organisasi &amp; kepanitiaan lainnya{" "}
-              <span aria-hidden="true">+</span>
+              <div className="more-experience-heading">
+                <h3>Pengalaman organisasi &amp; kepanitiaan lainnya</h3>
+                <p>6 pengalaman di komunitas, organisasi sekolah, dan acara.</p>
+              </div>
+              <div className="more-experience-action">
+                <span className="when-closed">Lihat pengalaman</span>
+                <span className="when-open">Tutup daftar</span>
+                <span className="more-experience-icon" aria-hidden="true">+</span>
+              </div>
             </summary>
             <div className="additional-grid">
               <article>
