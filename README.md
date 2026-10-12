@@ -7,7 +7,7 @@ Website pribadi untuk assignment #4, menggunakan **HTML5 dan CSS murni**. Tidak 
 
 ## Konten
 
-Profil dan foto, pengalaman kerja dan organisasi, pendidikan, hard skills dan soft skills, software dan bahasa, galeri desain/fotografi/videografi, sembilan preview website live, prestasi, serta kontak dan tautan sosial. Isi dirangkum dari CV Bahasa Indonesia dan portofolio 2026 milik Nebukadnezar Ahmad. Riwayat terbaru mengacu pada CV; periode Chief Creative YRI yang tidak mencantumkan tahun ditampilkan sebagai aktif.
+Profil dan foto, pengalaman kerja dan organisasi, pendidikan, hard skills dan soft skills, software dan bahasa, galeri desain/fotografi/videografi, enam preview website live dan tiga demo dashboard hanya baca, prestasi, serta kontak dan tautan sosial. Isi dirangkum dari CV Bahasa Indonesia dan portofolio 2026 milik Nebukadnezar Ahmad. Riwayat terbaru mengacu pada CV; periode Chief Creative YRI yang tidak mencantumkan tahun ditampilkan sebagai aktif.
 
 ## Struktur sumber
 
@@ -15,7 +15,7 @@ Profil dan foto, pengalaman kerja dan organisasi, pendidikan, hard skills dan so
 index.html       # Struktur HTML semantik dan isi website
 styles.css       # Seluruh styling, layout, dan media queries
 assets/          # Foto, karya, favicon, CV DOCX, dan portofolio PDF
-tests/          # Verifikasi struktur, formulir, dan jalur aset
+demos/          # Preview dashboard hanya baca, HTML + CSS
 ```
 
 Foto dan gambar karya diekstrak dari portofolio milik pemilik website. Gambar menggunakan WebP agar ringan. PDF portofolio dikompresi untuk unduhan. Seluruh jalur aset relatif sehingga kompatibel dengan subdirektori GitHub Pages.
@@ -32,27 +32,21 @@ Foto dan gambar karya diekstrak dari portofolio milik pemilik website. Gambar me
 
 ## Portofolio website live
 
-Galeri website menampilkan Mutawwifmu, PRYVO.ID, Seketika, Portal Desa Tegalrejo, Youtz Attendance, SIGAP, YRI Analytics Studio, Student Worker Studio, dan MARKAS melalui iframe live. Tombol membuka website dan repositori tersedia. Versi lomba Portal Desa juga ditautkan. Halaman dashboard terbatas hanya menampilkan halaman masuk; kredensial dan data internal tidak disertakan.
+Galeri website menampilkan Mutawwifmu, PRYVO.ID, Seketika, Portal Desa Tegalrejo, Youtz Attendance, SIGAP, YRI Analytics Studio, Student Worker Studio, dan MARKAS melalui iframe. Tombol membuka website dan repositori tersedia. Versi lomba Portal Desa juga ditautkan. YRI Analytics Studio, Student Worker Studio, dan MARKAS memakai demo HTML/CSS lokal tanpa password dengan data contoh. Pengunjung hanya bisa berpindah menu dan scroll. Demo tidak memuat JavaScript, tidak mengakses API internal, tidak meminta kredensial, dan tidak menyediakan aksi pengisian atau perubahan data.
 
-Iframe menggunakan lazy loading, judul aksesibel, dan sandbox. CSS memakai versi pada URL stylesheet agar cache browser tidak mencampur HTML baru dengan CSS lama.
+Iframe menggunakan lazy loading, judul aksesibel, dan sandbox. Sandbox tiga demo dashboard tidak mengizinkan script, pengiriman form, atau pop-up. CSS memakai versi pada URL stylesheet agar cache browser tidak mencampur HTML baru dengan CSS lama.
 
 ## Formulir kontak
 
 Formulir memvalidasi nama, email, dan pesan melalui HTML. Nomor kontak bersifat opsional. Tombol membuka aplikasi email melalui `mailto:` dengan data formulir; pengunjung perlu memeriksa dan mengirim pesan dari aplikasi tersebut. Website tidak menyimpan pesan atau mengirim email langsung melalui server. Alamat email, nomor telepon, dan tautan sosial juga tersedia.
 
-## Menjalankan lokal
+## Membuka website
 
-```bash
-python3 -m http.server 4173
-```
-
-Buka `http://localhost:4173`. Tidak perlu instalasi dependensi untuk menjalankan website.
+Buka `index.html` langsung di browser, atau gunakan tautan GitHub Pages di atas. Tidak memerlukan Python, JavaScript, framework, instalasi dependensi, atau proses build.
 
 ## Verifikasi
 
-```bash
-python3 -m unittest discover -s tests -v
-```
+Struktur HTML, jalur aset, navigasi demo, tampilan responsif, dan pembatasan hanya baca diperiksa sebelum publikasi. Alat pengujian digunakan secara lokal dan tidak disertakan dalam repositori tugas.
 
 ## GitHub Pages
 
