@@ -17,11 +17,23 @@
   overflow: hidden;
   pointer-events: none;
   user-select: none;
-  opacity: 0.34;
+  opacity: 1;
 }
-.flow-background svg {
-  width: 100%;
-  height: 100%;
+.floating-shape {
+  position: absolute;
+  width: clamp(20px, var(--shape-size), 19vw);
+  aspect-ratio: 1;
+  color: var(--accent);
+}
+.shape-burgundy { color: var(--burgundy); }
+.shape-float { width: 100%; height: 100%; animation: shape-hover 5s ease-in-out infinite alternate; animation-delay: var(--float-delay); }
+.floating-shape svg { display: block; width: 100%; height: 100%; overflow: visible; fill: currentColor; opacity: .18; }
+.shape-ring svg, .shape-square svg { fill: none; stroke: currentColor; stroke-width: 1.5; opacity: .24; }
+.shape-disc svg { opacity: .09; }
+.shape-star svg { opacity: .32; }
+@keyframes shape-hover {
+  from { transform: translateY(-12px) rotate(-5deg); }
+  to { transform: translateY(12px) rotate(5deg); }
 }
 .hero-copy,
 .portrait-entrance,
@@ -42,43 +54,13 @@ footer.container {
   position: relative;
   z-index: 2;
 }
-.flow-outline {
-  stroke: url(#flow-palette);
-  stroke-width: 2;
-  opacity: 0.65;
-}
-.flow-current {
-  stroke: #b8a6ad;
-  stroke-width: 3;
-  stroke-dasharray: 34 120;
-  opacity: 0.9;
-}
-.flow-draw {
-  stroke: url(#flow-palette);
-  stroke-width: 2;
-  opacity: 0.7;
-}
-.flow-side {
-  stroke: #b8a6ad;
-  stroke-width: 1;
-  opacity: 0.5;
-}
 @media (max-width: 760px) {
-  .flow-background {
-    opacity: 0.24;
-  }
+  .flow-background { opacity: .65; }
+  .floating-shape { width: clamp(18px, calc(var(--shape-size) * .65), 25vw); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .flow-group {
-    transform: none !important;
-  }
-  .flow-current {
-    stroke-dashoffset: 0 !important;
-  }
-  .flow-draw {
-    stroke-dasharray: none !important;
-    stroke-dashoffset: 0 !important;
-  }
+  .floating-shape { transform: none !important; }
+  .shape-float { animation: none; }
 }
 @media print {
   .flow-background {
