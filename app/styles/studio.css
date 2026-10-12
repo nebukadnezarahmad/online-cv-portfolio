@@ -10,6 +10,66 @@
   --night: #5b0b25;
   --night-muted: #e4cdd6;
 }
+.flow-background {
+  position: fixed;
+  inset: 0;
+  z-index: 8;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.2;
+}
+.flow-background svg {
+  width: 100%;
+  height: 100%;
+}
+.profile-visual,
+.website-preview {
+  z-index: 9;
+}
+.flow-outline {
+  stroke: url(#flow-palette);
+  stroke-width: 1.5;
+  opacity: 0.5;
+}
+.flow-current {
+  stroke: #b8a6ad;
+  stroke-width: 2.5;
+  stroke-dasharray: 34 120;
+  opacity: 0.7;
+}
+.flow-draw {
+  stroke: url(#flow-palette);
+  stroke-width: 2;
+  opacity: 0.7;
+}
+.flow-side {
+  stroke: #b8a6ad;
+  stroke-width: 1;
+  opacity: 0.5;
+}
+@media (max-width: 760px) {
+  .flow-background {
+    opacity: 0.13;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flow-group {
+    transform: none !important;
+  }
+  .flow-current {
+    stroke-dashoffset: 0 !important;
+  }
+  .flow-draw {
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
+@media print {
+  .flow-background {
+    display: none;
+  }
+}
 body {
   background: var(--paper);
 }

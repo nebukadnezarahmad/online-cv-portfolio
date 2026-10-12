@@ -81,7 +81,11 @@ export default function PortfolioProjects() {
               key={project.title}
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -18 }}
+              exit={{
+                opacity: 0,
+                y: -18,
+                transition: { duration: reduce ? 0 : 0.18, delay: 0 },
+              }}
               transition={{
                 duration: reduce ? 0 : 0.4,
                 delay: reduce ? 0 : index * 0.04,

@@ -13,7 +13,7 @@ Proyek lomba: SIGAP, Portal Desa Tegalrejo, dan Seketika. Alat bantu pekerjaan: 
 
 ## Desain dan interaksi
 
-Biru `#2B4F81` dan burgundy `#5B0B25` menjadi warna utama. GSAP ScrollTrigger mengatur urutan pembuka, parallax, penekanan kata, pengalaman horizontal, dan gerakan visual proyek. Motion mengatur menu ponsel, pergantian kategori proyek, serta popup karya.
+Biru `#2B4F81` dan burgundy `#5B0B25` menjadi warna utama. GSAP ScrollTrigger mengatur urutan pembuka, parallax, penekanan kata, pengalaman horizontal, dan gerakan visual proyek. Motion mengatur menu ponsel, pergantian kategori proyek, popup karya, serta latar garis yang mengalir mengikuti scroll sepanjang halaman. Latar tidak menangkap klik dan gerakannya nonaktif pada mode pengurangan gerakan.
 
 Pengalaman horizontal aktif pada desktop dengan lebar minimal 1100px, tinggi minimal 750px, pointer presisi, dan pengurangan gerakan nonaktif. Ponsel dan mode pengurangan gerakan memakai pengalaman vertikal. Scroll memakai kontrol browser.
 
