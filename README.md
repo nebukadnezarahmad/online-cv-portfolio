@@ -7,7 +7,7 @@ Website pribadi untuk assignment #4, menggunakan **HTML5 dan CSS murni**. Tidak 
 
 ## Konten
 
-Profil dan foto, pengalaman kerja dan organisasi, pendidikan, hard skills dan soft skills, software dan bahasa, galeri desain/fotografi/videografi, proyek website, prestasi, serta kontak dan tautan sosial. Isi dirangkum dari CV Bahasa Indonesia dan portofolio 2026 milik Nebukadnezar Ahmad. Riwayat terbaru mengacu pada CV; periode Chief Creative YRI yang tidak mencantumkan tahun ditampilkan sebagai aktif.
+Profil dan foto, pengalaman kerja dan organisasi, pendidikan, hard skills dan soft skills, software dan bahasa, galeri desain/fotografi/videografi, sembilan preview website live, prestasi, serta kontak dan tautan sosial. Isi dirangkum dari CV Bahasa Indonesia dan portofolio 2026 milik Nebukadnezar Ahmad. Riwayat terbaru mengacu pada CV; periode Chief Creative YRI yang tidak mencantumkan tahun ditampilkan sebagai aktif.
 
 ## Struktur sumber
 
@@ -29,6 +29,12 @@ Foto dan gambar karya diekstrak dari portofolio milik pemilik website. Gambar me
 - **Typography:** font-family, font-size, font-weight, line-height, letter-spacing, dan text-align.
 - **Layout:** CSS Grid, Flexbox, responsive media queries, serta stylesheet cetak.
 - **Aksesibilitas:** label formulir, teks alternatif gambar, skip link, focus keyboard, dan prefers-reduced-motion.
+
+## Portofolio website live
+
+Galeri website menampilkan Mutawwifmu, PRYVO.ID, Seketika, Portal Desa Tegalrejo, Youtz Attendance, SIGAP, YRI Analytics Studio, Student Worker Studio, dan MARKAS melalui iframe live. Tombol membuka website dan repositori tersedia. Versi lomba Portal Desa juga ditautkan. Halaman dashboard terbatas hanya menampilkan halaman masuk; kredensial dan data internal tidak disertakan.
+
+Iframe menggunakan lazy loading, judul aksesibel, dan sandbox. CSS memakai versi pada URL stylesheet agar cache browser tidak mencampur HTML baru dengan CSS lama.
 
 ## Formulir kontak
 

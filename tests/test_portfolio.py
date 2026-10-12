@@ -10,7 +10,7 @@ CSS = (ROOT / "styles.css").read_text(encoding="utf-8")
 
 class PortfolioTests(unittest.TestCase):
     def test_external_css_is_linked(self):
-        self.assertIn('href="styles.css"', HTML)
+        self.assertRegex(HTML, r'href="styles\.css\?v=[^"]+"')
         self.assertNotIn("<style", HTML)
         self.assertNotIn('style="', HTML)
 
@@ -21,6 +21,7 @@ class PortfolioTests(unittest.TestCase):
             "pendidikan",
             "skills",
             "karya",
+            "website",
             "kontak",
         ):
             self.assertIn(f'id="{section_id}"', HTML)
@@ -101,6 +102,18 @@ class PortfolioTests(unittest.TestCase):
         self.assertIn('src="assets/profile.webp"', HTML)
         self.assertIn('href="assets/portofolio-nebukadnezar-ahmad.pdf"', HTML)
         self.assertNotIn("portrait-placeholder", HTML)
+
+    def test_website_previews_and_repositories_exist(self):
+        iframe_tags = re.findall(r"<iframe\b[^>]*>", HTML)
+        self.assertEqual(len(iframe_tags), 9)
+        for tag in iframe_tags:
+            self.assertIn('title="Preview live website ', tag)
+            self.assertIn('loading="lazy"', tag)
+            self.assertIn('sandbox="', tag)
+        self.assertIn('title="Preview live website SIGAP"', HTML)
+        self.assertNotIn('kalkulator-umroh-two.vercel.app', HTML)
+        self.assertIn('https://mutawwifmu.com', HTML)
+        self.assertIn('https://github.com/nebukadnezarahmad/pryvo-id', HTML)
 
     def test_site_uses_only_html_and_external_css(self):
         self.assertNotRegex(HTML, r"<script\b")
