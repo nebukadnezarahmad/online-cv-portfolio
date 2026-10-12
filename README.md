@@ -1,70 +1,67 @@
-# CV & Portofolio — Nebukadnezar Ahmad
+# CV & Portofolio Nebukadnezar Ahmad
 
-Website CV dan portofolio menggunakan **HTML5, CSS, dan JavaScript**. Tidak memerlukan framework atau proses build. JavaScript menambahkan filter proyek, navigasi ponsel, penanda bagian aktif, preview gambar, dan animasi scroll.
+Website pribadi dengan Next.js App Router, React, TypeScript, GSAP, dan Motion.
 
-- **Live website:** [nebukadnezarahmad.github.io/online-cv-portfolio](https://nebukadnezarahmad.github.io/online-cv-portfolio/)
-- **Repositori:** [github.com/nebukadnezarahmad/online-cv-portfolio](https://github.com/nebukadnezarahmad/online-cv-portfolio)
+- [Website](https://nebukadnezarahmad.github.io/online-cv-portfolio/)
+- [Repositori](https://github.com/nebukadnezarahmad/online-cv-portfolio)
 
 ## Konten
 
-Profil dan foto, pengalaman kerja dan organisasi, pendidikan, hard skills dan soft skills, software dan bahasa, galeri desain/fotografi/videografi, lima preview website live dan empat demo hanya baca, prestasi, serta kontak dan tautan sosial. Isi dirangkum dari CV Bahasa Indonesia dan portofolio 2026 milik Nebukadnezar Ahmad. Riwayat terbaru mengacu pada CV; periode Chief Creative YRI yang tidak mencantumkan tahun ditampilkan sebagai aktif.
+Profil, pengalaman kerja dan organisasi, pendidikan, keahlian, proyek website, karya visual, prestasi, serta kontak. Informasi berasal dari CV dan portofolio pemilik website.
 
-## Struktur sumber
+Proyek lomba: SIGAP, Portal Desa Tegalrejo, dan Seketika. Alat bantu pekerjaan: YRI Analytics Studio, Student Worker Studio, dan MARKAS. Proyek freelance dan pekerjaan: Mutawwifmu, PRYVO.ID, dan Youtz Attendance.
+
+## Desain dan interaksi
+
+Biru `#2B4F81` dan burgundy `#5B0B25` menjadi warna utama. GSAP ScrollTrigger mengatur urutan pembuka, parallax, penekanan kata, pengalaman horizontal, dan gerakan visual proyek. Motion mengatur menu ponsel, pergantian kategori proyek, serta popup karya.
+
+Pengalaman horizontal aktif pada desktop dengan lebar minimal 1100px, tinggi minimal 750px, pointer presisi, dan pengurangan gerakan nonaktif. Ponsel dan mode pengurangan gerakan memakai pengalaman vertikal. Scroll memakai kontrol browser.
+
+Empat demo dashboard memakai HTML/CSS dan data contoh. Sandbox tidak mengizinkan script, pengiriman form, atau pop-up. Pengunjung hanya bisa membaca, berpindah menu, dan scroll. Demo Youtz tidak mengakses kamera atau lokasi.
+
+## Struktur
 
 ```text
-index.html       # Struktur HTML semantik dan isi website
-styles.css       # Seluruh styling, layout, dan media queries
-cinematic.css    # Tampilan terang-gelap, proyek bergantian, dan layout scroll
-script.js        # Menu ponsel, filter proyek, navigasi aktif, dan dialog karya
-motion.js        # Pengalaman horizontal, penekanan kata, reveal, dan progress scroll
-assets/          # Foto, karya, favicon, CV DOCX, dan portofolio PDF
-demos/           # Preview dashboard hanya baca, HTML + CSS
+app/              Halaman, metadata, dan stylesheet
+components/       Komponen profil, navigasi, proyek, galeri, dan animasi
+data/             Data proyek dan karya visual
+lib/              Jalur aset untuk subfolder GitHub Pages
+public/assets/    Foto, karya, CV, dan portofolio
+public/demos/     Empat demo hanya baca
+.github/workflows/pages.yml
 ```
 
-Foto dan gambar karya diekstrak dari portofolio milik pemilik website. Gambar menggunakan WebP agar ringan. PDF portofolio dikompresi untuk unduhan. Seluruh jalur aset relatif sehingga kompatibel dengan subdirektori GitHub Pages.
+## Pengembangan
 
-## CSS Essentials
+```sh
+npm ci
+npm run dev
+npm run lint
+npm run typecheck
+npm run build
+```
 
-- **Element selectors:** `body`, `h1`, `a`, `input`, dan `textarea`.
-- **Class selectors:** `.hero`, `.container`, `.work-grid`, dan `.button`.
-- **ID selector:** `#skills`.
-- **Box model:** `box-sizing`, `margin`, `padding`, dan `border`.
-- **Typography:** font-family, font-size, font-weight, line-height, letter-spacing, dan text-align.
-- **Layout:** CSS Grid, Flexbox, responsive media queries, serta stylesheet cetak.
-- **Aksesibilitas:** label formulir, teks alternatif gambar, skip link, focus keyboard, dan prefers-reduced-motion.
+Buka http://localhost:3000. Website Next.js memerlukan server pengembangan atau hasil ekspor; sumber komponen tidak dibuka langsung sebagai file HTML.
 
-## Portofolio website live
+Untuk memeriksa ekspor GitHub Pages:
 
-Galeri website menampilkan Mutawwifmu, PRYVO.ID, Seketika, Portal Desa Tegalrejo, Youtz Attendance, SIGAP, YRI Analytics Studio, Student Worker Studio, dan MARKAS melalui iframe. Tombol membuka website dan repositori tersedia. Versi lomba Portal Desa juga ditautkan. Youtz Attendance, YRI Analytics Studio, Student Worker Studio, dan MARKAS memakai demo HTML/CSS lokal tanpa password dengan data contoh. Pengunjung hanya bisa berpindah menu dan scroll. Demo tidak memuat JavaScript, tidak mengakses API internal, tidak meminta kredensial, dan tidak menyediakan aksi pengisian atau perubahan data. Demo Youtz juga tidak mengakses kamera atau lokasi.
+```sh
+NEXT_PUBLIC_BASE_PATH=/online-cv-portfolio npm run build
+```
 
-Iframe menggunakan lazy loading, judul aksesibel, dan sandbox. Sandbox empat demo tidak mengizinkan script, pengiriman form, atau pop-up. CSS memakai versi pada URL stylesheet agar cache browser tidak mencampur HTML baru dengan CSS lama.
+Hasil statis berada di `out/`. Semua foto, unduhan, iframe lokal, dan bundle memakai prefix subfolder yang sama.
 
-## Formulir kontak
+## Publikasi
 
-Formulir memvalidasi nama, email, dan pesan melalui HTML. Nomor kontak bersifat opsional. Tombol membuka aplikasi email melalui `mailto:` dengan data formulir; pengunjung perlu memeriksa dan mengirim pesan dari aplikasi tersebut. Website tidak menyimpan pesan atau mengirim email langsung melalui server. Alamat email, nomor telepon, dan tautan sosial juga tersedia.
+GitHub Pages memakai GitHub Actions. Push ke `main` menjalankan instalasi dependensi, lint, build Next.js, dan publikasi hasil ekspor. Dependensi dikunci melalui `package-lock.json`.
 
-## Membuka website
+## Kontak
 
-Buka `index.html` langsung di browser, atau gunakan tautan GitHub Pages di atas. Tidak memerlukan instalasi dependensi atau proses build.
+Formulir memvalidasi nama, email, dan pesan melalui HTML, lalu membuka aplikasi email dengan `mailto:`. Pengunjung memeriksa dan mengirim pesan dari aplikasi email. Website tidak menyimpan pesan di server.
 
-## Verifikasi
+## Referensi
 
-Struktur HTML, jalur aset, navigasi demo, tampilan responsif, dan pembatasan hanya baca diperiksa sebelum publikasi. Alat pengujian digunakan secara lokal dan tidak disertakan dalam repositori tugas.
+- [Iqmal](https://iqmal.dev/): scroll, pengalaman horizontal, dan susunan proyek.
+- [RyHar](https://ryhar.my.id/): profil dan navigasi portofolio.
 
-## Animasi scroll
-
-Pada desktop dengan pointer presisi, lebar minimal 1100px, dan tinggi minimal 700px, bagian pengalaman menetap di layar sementara enam kartu bergerak horizontal mengikuti scroll halaman. Tombol sebelumnya dan berikutnya tersedia. Ponsel, layar kecil, dan pengaturan pengurangan gerakan memakai tampilan pengalaman vertikal.
-
-Ringkasan profil menekankan kata mengikuti posisi scroll. Gerakan foto dibatasi, reveal berjalan sekali saat elemen masuk layar, dan penanda atas menunjukkan progres halaman. Scroll memakai perilaku browser; roda mouse dan sentuhan tidak dicegat. Seluruh informasi tetap tersedia ketika JavaScript dimatikan, termasuk tautan navigasi, proyek, dan unduhan.
-
-## GitHub Pages
-
-Publikasi dari branch `main`, folder `/ (root)`, melalui **Settings → Pages → Deploy from a branch**. Sesudah commit didorong ke `main`, GitHub Pages memperbarui website otomatis.
-
-## Referensi visual
-
-- [Iqmal](https://iqmal.dev/): referensi utama untuk transisi terang-gelap, penekanan teks, pengalaman horizontal, dan penyajian proyek bergantian.
-- [RyHar](https://ryhar.my.id/): hierarki profil, navigasi, dan susunan portofolio. Foto dan identitas visual mengikuti portofolio Nebukadnezar.
-- Versi sebelumnya website ini: riwayat pengalaman, pendidikan, prestasi, dan proyek digital.
-
-© 2026 Nebukadnezar Ahmad. Karya visual dan dokumen merupakan milik Nebukadnezar Ahmad.
+© 2026 Nebukadnezar Ahmad. Karya visual dan dokumen milik pemilik website.
