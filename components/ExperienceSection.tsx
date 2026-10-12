@@ -222,8 +222,8 @@ export default function ExperienceSection() {
                 <p>6 pengalaman di komunitas, organisasi sekolah, dan acara.</p>
               </div>
               <div className="more-experience-action">
-                <span className="when-closed">Lihat pengalaman</span>
-                <span className="when-open">Tutup daftar</span>
+                <span className="when-closed">Klik untuk membuka daftar</span>
+                <span className="when-open">Klik untuk menutup daftar</span>
                 <span className="more-experience-icon" aria-hidden="true">+</span>
               </div>
             </summary>

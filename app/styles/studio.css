@@ -506,3 +506,20 @@ body {
   #pengalaman .more-experience > summary { align-items: flex-start; flex-direction: column; padding: 24px; gap: 18px; }
   .more-experience .additional-grid { padding: 4px 24px 20px; }
 }
+
+.more-experience-action {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--burgundy);
+  color: #fff;
+  font-weight: 700;
+}
+.more-experience-icon {
+  width: 28px;
+  height: 28px;
+  background: #ffffff20;
+  font-size: 22px;
+}
+.more-experience[open] .more-experience-icon { transform: none; font-size: 0; }
+.more-experience[open] .more-experience-icon::after { content: "−"; font-size: 22px; }
+#pengalaman .more-experience > summary:hover .more-experience-action { background: #7a173a; }
