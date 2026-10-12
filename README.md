@@ -1,6 +1,6 @@
 # CV & Portofolio — Nebukadnezar Ahmad
 
-Website pribadi untuk assignment #4, menggunakan **HTML5 dan CSS murni**. Tidak menggunakan JavaScript, framework, atau proses build.
+Website CV dan portofolio menggunakan **HTML5, CSS, dan JavaScript**. Tidak memerlukan framework atau proses build. JavaScript menambahkan filter proyek, navigasi ponsel, penanda bagian aktif, dan preview gambar.
 
 - **Live website:** [nebukadnezarahmad.github.io/online-cv-portfolio](https://nebukadnezarahmad.github.io/online-cv-portfolio/)
 - **Repositori:** [github.com/nebukadnezarahmad/online-cv-portfolio](https://github.com/nebukadnezarahmad/online-cv-portfolio)
@@ -14,6 +14,7 @@ Profil dan foto, pengalaman kerja dan organisasi, pendidikan, hard skills dan so
 ```text
 index.html       # Struktur HTML semantik dan isi website
 styles.css       # Seluruh styling, layout, dan media queries
+script.js        # Menu ponsel, filter proyek, navigasi aktif, dan dialog karya
 assets/          # Foto, karya, favicon, CV DOCX, dan portofolio PDF
 demos/           # Preview dashboard hanya baca, HTML + CSS
 ```
@@ -54,7 +55,7 @@ Publikasi dari branch `main`, folder `/ (root)`, melalui **Settings → Pages �
 
 ## Referensi visual
 
-- [RyHar](https://ryhar.my.id/): profil dua kolom, foto melingkar, navigasi sederhana, dan susunan portofolio.
+- [RyHar](https://ryhar.my.id/): hierarki profil, navigasi, dan susunan portofolio. Foto dan identitas visual mengikuti portofolio Nebukadnezar.
 - Versi sebelumnya website ini: riwayat pengalaman, pendidikan, prestasi, dan proyek digital.
 
 © 2026 Nebukadnezar Ahmad. Karya visual dan dokumen merupakan milik Nebukadnezar Ahmad.

@@ -8,14 +8,16 @@
   <meta name="theme-color" content="#f8fafc">
   <title>Nebukadnezar Ahmad | CV & Portofolio</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261012-scroll">
+  <link rel="stylesheet" href="styles.css?v=20261012-studio">
+  <script src="script.js?v=20261012-studio" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Lewati ke konten</a>
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Nebukadnezar Ahmad, beranda">Nebukadnezar<span>.</span></a>
-      <nav aria-label="Navigasi utama">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" hidden>Menu <span aria-hidden="true">☰</span></button>
+      <nav id="main-nav" aria-label="Navigasi utama">
         <a href="#tentang">Profil</a><a href="#pengalaman">Pengalaman</a><a href="#pendidikan">Pendidikan</a><a href="#skills">Keahlian</a><a href="#website">Website</a><a href="#karya">Karya</a>
       </nav>
       <a class="header-contact" href="#kontak">Hubungi saya <span aria-hidden="true">↗</span></a>
@@ -94,7 +96,16 @@
     </section>
     <section class="section container websites-section" id="website" aria-labelledby="website-title">
       <div class="section-heading"><div><p class="eyebrow">Portofolio website</p><h2 id="website-title">Website yang saya bangun.</h2></div><a class="text-link" href="https://github.com/nebukadnezarahmad?tab=repositories" target="_blank" rel="noopener noreferrer">Semua repositori GitHub ↗</a></div>
-      <p class="website-intro">Saya membuat SIGAP, Portal Desa Tegalrejo, dan Seketika untuk lomba. YRI Analytics Studio, Student Worker Studio, dan MARKAS saya gunakan untuk memudahkan pekerjaan sehari-hari. Website lainnya saya kerjakan untuk proyek freelance dan pekerjaan. Anda bisa mencoba website di bawah; demo dashboard memakai data contoh yang hanya bisa dilihat.</p>
+      <p class="website-intro">Saya membuat SIGAP, Portal Desa Tegalrejo, dan Seketika untuk lomba. YRI Analytics Studio, Student Worker Studio, dan MARKAS membantu pekerjaan saya sehari-hari. Proyek lainnya saya kerjakan untuk freelance dan pekerjaan. Preview dashboard memakai data contoh.</p>
+      <div class="project-toolbar" hidden>
+        <div class="project-filters" role="group" aria-label="Filter proyek website">
+          <button type="button" data-filter="all" aria-pressed="true">Semua proyek</button>
+          <button type="button" data-filter="competition" aria-pressed="false">Proyek lomba</button>
+          <button type="button" data-filter="tools" aria-pressed="false">Alat kerja</button>
+          <button type="button" data-filter="work" aria-pressed="false">Freelance &amp; pekerjaan</button>
+        </div>
+        <p class="project-count" aria-live="polite" aria-atomic="true">9 proyek</p>
+      </div>
       <div class="website-grid">
         <article class="website-card"><div class="browser-bar"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="browser-address">mutawwifmu.com</span><span class="preview-status">Live</span></div><div class="website-preview"><iframe src="https://mutawwifmu.com" title="Preview live website Mutawwifmu" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="website-copy"><p class="category">Freelance &amp; pekerjaan</p><h3>Mutawwifmu</h3><p class="website-description">Website yang saya kerjakan untuk layanan land arrangement umroh, berisi paket perjalanan, informasi layanan, dan konsultasi.</p><p class="preview-note">Preview live · gulir di dalam bingkai untuk menjelajahi.</p><div class="website-actions"><a class="button primary" href="https://mutawwifmu.com" target="_blank" rel="noopener noreferrer">Buka website <span aria-hidden="true">↗</span></a></div></div></article>
         <article class="website-card"><div class="browser-bar"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="browser-address">pryvo-id.vercel.app</span><span class="preview-status">Live</span></div><div class="website-preview"><iframe src="https://pryvo-id.vercel.app/id" title="Preview live website PRYVO.ID" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="website-copy"><p class="category">Freelance &amp; pekerjaan</p><h3>PRYVO.ID</h3><p class="website-description">Platform yang saya kerjakan untuk private fan experience, tempat pengguna melihat talent dan memilih sesi privat.</p><p class="preview-note">Preview live · gulir di dalam bingkai untuk menjelajahi.</p><div class="website-actions"><a class="button primary" href="https://pryvo-id.vercel.app/id" target="_blank" rel="noopener noreferrer">Buka website <span aria-hidden="true">↗</span></a><a class="website-repo" href="https://github.com/nebukadnezarahmad/pryvo-id" target="_blank" rel="noopener noreferrer">Repositori ↗</a></div></div></article>
@@ -137,5 +148,6 @@
     </div></section>
   </main>
   <footer class="container"><div><a class="brand" href="#top">Nebukadnezar<span>.</span></a><p>© 2026 Nebukadnezar Ahmad</p></div><p>CV dan portofolio pribadi.</p><a class="back-top" href="#top">Kembali ke atas ↑</a></footer>
+  <dialog class="art-dialog" aria-labelledby="art-title"><div class="art-dialog-header"><h2 id="art-title">Karya pilihan</h2><button class="dialog-close" type="button">Tutup <span aria-hidden="true">×</span></button></div><img class="art-dialog-image" alt=""><p class="art-dialog-caption"></p></dialog>
 </body>
 </html>
