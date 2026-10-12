@@ -15,7 +15,7 @@ Profil dan foto, pengalaman kerja dan organisasi, pendidikan, hard skills dan so
 index.html       # Struktur HTML semantik dan isi website
 styles.css       # Seluruh styling, layout, dan media queries
 assets/          # Foto, karya, favicon, CV DOCX, dan portofolio PDF
-demos/          # Preview dashboard hanya baca, HTML + CSS
+demos/           # Preview dashboard hanya baca, HTML + CSS
 ```
 
 Foto dan gambar karya diekstrak dari portofolio milik pemilik website. Gambar menggunakan WebP agar ringan. PDF portofolio dikompresi untuk unduhan. Seluruh jalur aset relatif sehingga kompatibel dengan subdirektori GitHub Pages.
@@ -42,7 +42,7 @@ Formulir memvalidasi nama, email, dan pesan melalui HTML. Nomor kontak bersifat 
 
 ## Membuka website
 
-Buka `index.html` langsung di browser, atau gunakan tautan GitHub Pages di atas. Tidak memerlukan Python, JavaScript, framework, instalasi dependensi, atau proses build.
+Buka `index.html` langsung di browser, atau gunakan tautan GitHub Pages di atas. Tidak memerlukan instalasi dependensi atau proses build.
 
 ## Verifikasi
 
