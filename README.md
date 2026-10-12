@@ -10,28 +10,12 @@ Saya mengerjakan SIGAP, Portal Desa Tegalrejo, dan Seketika untuk lomba. YRI Ana
 
 Demo YRI, Student Worker, MARKAS, dan Youtz memakai data contoh. Pengunjung bisa berpindah menu dan scroll tanpa login. Demo ini hanya untuk dilihat; pengunjung tidak bisa mengisi atau mengubah data.
 
-## Teknologi
+## Tools yang digunakan
 
 Website ini memakai Next.js, React, dan TypeScript. GSAP mengatur animasi scroll, sedangkan Motion menangani interaksi menu, filter proyek, galeri, dan bentuk melayang di latar. Warna utamanya biru `#2B4F81` dan burgundy `#5B0B25`.
 
 Di layar desktop yang cukup lebar, bagian pengalaman bergerak horizontal saat scroll. Di ponsel, pengalaman tersusun vertikal. Website menonaktifkan animasi ketika pengunjung mengaktifkan pengurangan gerakan di perangkatnya.
 
-## Menjalankan di komputer
-
-```sh
-npm ci
-npm run dev
-```
-
-Buka [localhost:3000](http://localhost:3000) setelah server berjalan.
-
-Untuk memeriksa kode dan membuat hasil build:
-
-```sh
-npm run lint
-npm run typecheck
-npm run build
-```
 
 ## Susunan folder
 
@@ -42,16 +26,6 @@ data/             Daftar proyek dan karya
 lib/              Pengaturan jalur aset
 public/assets/    Foto, karya, CV, dan portofolio
 public/demos/     Demo dashboard dengan data contoh
-```
-
-## GitHub Pages
-
-Setiap push ke `main` menjalankan pemeriksaan kode, build, dan publikasi melalui GitHub Actions. Hasil ekspor statis berada di folder `out/`.
-
-Untuk membuat build dengan jalur GitHub Pages di komputer:
-
-```sh
-NEXT_PUBLIC_BASE_PATH=/online-cv-portfolio npm run build
 ```
 
 ## Kontak
