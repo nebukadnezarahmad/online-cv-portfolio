@@ -7,7 +7,7 @@ Website pribadi untuk assignment #4, menggunakan **HTML5 dan CSS murni**. Tidak 
 
 ## Konten
 
-Profil dan foto, pengalaman kerja dan organisasi, pendidikan, hard skills dan soft skills, software dan bahasa, galeri desain/fotografi/videografi, enam preview website live dan tiga demo dashboard hanya baca, prestasi, serta kontak dan tautan sosial. Isi dirangkum dari CV Bahasa Indonesia dan portofolio 2026 milik Nebukadnezar Ahmad. Riwayat terbaru mengacu pada CV; periode Chief Creative YRI yang tidak mencantumkan tahun ditampilkan sebagai aktif.
+Profil dan foto, pengalaman kerja dan organisasi, pendidikan, hard skills dan soft skills, software dan bahasa, galeri desain/fotografi/videografi, lima preview website live dan empat demo hanya baca, prestasi, serta kontak dan tautan sosial. Isi dirangkum dari CV Bahasa Indonesia dan portofolio 2026 milik Nebukadnezar Ahmad. Riwayat terbaru mengacu pada CV; periode Chief Creative YRI yang tidak mencantumkan tahun ditampilkan sebagai aktif.
 
 ## Struktur sumber
 
@@ -32,9 +32,9 @@ Foto dan gambar karya diekstrak dari portofolio milik pemilik website. Gambar me
 
 ## Portofolio website live
 
-Galeri website menampilkan Mutawwifmu, PRYVO.ID, Seketika, Portal Desa Tegalrejo, Youtz Attendance, SIGAP, YRI Analytics Studio, Student Worker Studio, dan MARKAS melalui iframe. Tombol membuka website dan repositori tersedia. Versi lomba Portal Desa juga ditautkan. YRI Analytics Studio, Student Worker Studio, dan MARKAS memakai demo HTML/CSS lokal tanpa password dengan data contoh. Pengunjung hanya bisa berpindah menu dan scroll. Demo tidak memuat JavaScript, tidak mengakses API internal, tidak meminta kredensial, dan tidak menyediakan aksi pengisian atau perubahan data.
+Galeri website menampilkan Mutawwifmu, PRYVO.ID, Seketika, Portal Desa Tegalrejo, Youtz Attendance, SIGAP, YRI Analytics Studio, Student Worker Studio, dan MARKAS melalui iframe. Tombol membuka website dan repositori tersedia. Versi lomba Portal Desa juga ditautkan. Youtz Attendance, YRI Analytics Studio, Student Worker Studio, dan MARKAS memakai demo HTML/CSS lokal tanpa password dengan data contoh. Pengunjung hanya bisa berpindah menu dan scroll. Demo tidak memuat JavaScript, tidak mengakses API internal, tidak meminta kredensial, dan tidak menyediakan aksi pengisian atau perubahan data. Demo Youtz juga tidak mengakses kamera atau lokasi.
 
-Iframe menggunakan lazy loading, judul aksesibel, dan sandbox. Sandbox tiga demo dashboard tidak mengizinkan script, pengiriman form, atau pop-up. CSS memakai versi pada URL stylesheet agar cache browser tidak mencampur HTML baru dengan CSS lama.
+Iframe menggunakan lazy loading, judul aksesibel, dan sandbox. Sandbox empat demo tidak mengizinkan script, pengiriman form, atau pop-up. CSS memakai versi pada URL stylesheet agar cache browser tidak mencampur HTML baru dengan CSS lama.
 
 ## Formulir kontak
 

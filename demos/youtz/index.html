@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demo Youtz Attendance dengan data contoh. Menu dapat dibuka tanpa login; data hanya bisa dilihat.">
+  <title>Youtz Attendance · Demo portofolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Lewati navigasi</a>
+  <div class="app">
+    <header class="site-header">
+      <div class="brand"><span class="brand-mark">YM</span><div><strong>Youtz Group Corporation</strong><small>#MedianyaAnakMuda</small></div></div>
+      <nav aria-label="Menu Youtz Attendance">
+        <a class="nav-attendance" href="#absen">Absen Masuk</a>
+        <a class="nav-workspace" href="#workspace">Workspace</a>
+        <a class="nav-calendar" href="#kalender">Kalender</a>
+      </nav>
+      <div class="staff"><span class="avatar" aria-hidden="true">SC</span><div><strong>Staf Contoh</strong><small>Akun demo</small></div></div>
+    </header>
+    <main>
+      <p class="demo-note">Demo portofolio · seluruh data adalah contoh. Anda bisa membuka menu dan membaca isinya. Presensi, pengisian, dan perubahan data tidak tersedia.</p>
+      <div class="views">
+        <section class="panel workspace" id="workspace" aria-labelledby="workspace-title" tabindex="-1">
+          <div class="section-heading"><div><p class="eyebrow">Senin, 12 Oktober 2026 · data contoh</p><h1 id="workspace-title">Workspace Harian</h1><p>Target kerja dan laporan pekerjaan staf contoh.</p></div><div class="progress-number"><strong>67%</strong><span>Target selesai</span></div></div>
+          <ol class="steps"><li class="done">1 · Absen Masuk</li><li class="current">2 · Workspace</li><li>3 · Absen Pulang</li></ol>
+          <div class="two-column">
+            <article class="card"><div class="card-heading"><h2>Target Hari Ini</h2><span class="badge blue">3 target</span></div><ul class="tasks">
+              <li><span class="check" aria-hidden="true">✓</span><div><h3>Menyiapkan desain publikasi kegiatan</h3><span class="badge green">Selesai</span></div></li>
+              <li><span class="check" aria-hidden="true">✓</span><div><h3>Menyusun naskah video media sosial</h3><span class="badge green">Selesai</span></div></li>
+              <li><span class="pending" aria-hidden="true">○</span><div><h3>Mengedit video dokumentasi</h3><span class="badge pink">Dikerjakan</span></div></li>
+            </ul><label class="progress-label" for="target-progress">2 dari 3 target selesai</label><progress id="target-progress" value="2" max="3">2 dari 3</progress><p class="muted">Daftar target hanya bisa dilihat dalam demo ini.</p></article>
+            <article class="card"><h2>Presensi Hari Ini</h2><dl class="attendance-list"><div><dt>Masuk</dt><dd>09.45 WIB</dd></div><div><dt>Status</dt><dd><span class="badge green">Tepat waktu</span></dd></div><div><dt>Pulang</dt><dd>Belum tercatat</dd></div></dl><p class="muted">Contoh presensi staf, bukan catatan kehadiran sebenarnya.</p><a class="text-link" href="#laporan">Lihat laporan pekerjaan →</a></article>
+          </div>
+        </section>
+        <section class="panel attendance" id="absen" aria-labelledby="attendance-title" tabindex="-1">
+          <div class="section-heading"><div><p class="eyebrow">Contoh tampilan presensi</p><h1 id="attendance-title">Absen Masuk</h1><p>Contoh hasil presensi staf pada 12 Oktober 2026.</p></div><div class="progress-number"><strong>09.45</strong><span>WIB · waktu contoh</span></div></div>
+          <ol class="steps"><li class="current">1 · Absen Masuk</li><li>2 · Workspace</li><li>3 · Absen Pulang</li></ol>
+          <div class="two-column"><div class="camera-example"><div class="portrait-placeholder" aria-hidden="true"><span></span></div><strong>Area foto presensi</strong><p>Foto tidak ditampilkan dalam demo.</p><small>Kamera dan lokasi tidak diakses.</small></div><div><article class="card"><h2>Info Kehadiran</h2><dl class="attendance-list"><div><dt>Staf</dt><dd>Staf Contoh</dd></div><div><dt>Jam masuk</dt><dd>09.45 WIB</dd></div><div><dt>Status</dt><dd><span class="badge green">Tepat waktu</span></dd></div></dl><p class="muted">Pengambilan foto dan pengiriman presensi tidak tersedia di demo.</p><a class="text-link" href="#workspace">Lihat workspace →</a></article><article class="card"><h2>Aturan Kehadiran</h2><ul class="rules"><li>Tepat waktu: sebelum atau pukul 10.00 WIB</li><li>Toleransi keterlambatan: 10.01–10.15 WIB</li><li>Terlambat: setelah 10.15 WIB</li></ul></article></div></div>
+        </section>
+        <section class="panel report" id="laporan" aria-labelledby="report-title" tabindex="-1">
+          <div class="section-heading"><div><p class="eyebrow">12 Oktober 2026 · data contoh</p><h1 id="report-title">Laporan Pekerjaan</h1><p>Contoh laporan kerja harian yang sudah terisi.</p></div></div>
+          <nav class="subnav" aria-label="Menu workspace"><a href="#workspace">Target Hari Ini</a><a class="selected" href="#laporan">Laporan Pekerjaan</a></nav>
+          <article class="card"><h2>Catatan Staf Contoh</h2><div class="report-text"><p>Desain publikasi kegiatan selesai dan siap ditinjau tim.</p><p>Naskah video media sosial sudah disusun. Editing video dokumentasi masih dikerjakan.</p><p>Besok, pekerjaan dilanjutkan dengan menambahkan takarir dan memeriksa hasil editing.</p></div><p class="muted">Laporan ini hanya contoh. Pengunjung tidak bisa menyunting atau menyimpannya.</p></article>
+          <a class="text-link light" href="#kalender">Lihat kalender riwayat →</a>
+        </section>
+        <section class="panel calendar" id="kalender" aria-labelledby="calendar-title" tabindex="-1">
+          <div class="section-heading"><div><p class="eyebrow">Data contoh</p><h1 id="calendar-title">Kalender Riwayat</h1><p>Contoh kehadiran dan pekerjaan selama Oktober 2026.</p></div></div>
+          <div class="stats"><article class="card"><span>Hadir</span><strong>8 hari</strong></article><article class="card"><span>Terlambat</span><strong>1 hari</strong></article><article class="card"><span>Target dibuat</span><strong>24</strong></article><article class="card"><span>Target selesai</span><strong>20</strong></article></div>
+          <article class="card"><h2>Oktober 2026</h2><div class="calendar-grid" role="img" aria-label="Kalender contoh Oktober 2026: tanggal 1, 2, 5 sampai 9, dan 12 memiliki catatan kehadiran.">
+            <b>Min</b><b>Sen</b><b>Sel</b><b>Rab</b><b>Kam</b><b>Jum</b><b>Sab</b>
+            <span class="blank"></span><span class="blank"></span><span class="blank"></span><span class="blank"></span><span class="present">1</span><span class="present">2</span><span>3</span>
+            <span>4</span><span class="present">5</span><span class="present">6</span><span class="present">7</span><span class="present">8</span><span class="present">9</span><span>10</span>
+            <span>11</span><span class="today">12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span>
+            <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+            <span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+          </div><p class="muted">Tanda biru menunjukkan contoh hari dengan catatan kehadiran.</p></article>
+          <article class="card"><h2>Riwayat Terbaru</h2><div class="table-scroll"><table><caption>Presensi staf contoh</caption><thead><tr><th>Tanggal</th><th>Masuk</th><th>Pulang</th><th>Target selesai</th></tr></thead><tbody><tr><td>12 Oktober 2026</td><td>09.45</td><td>Belum tercatat</td><td>2 dari 3</td></tr><tr><td>9 Oktober 2026</td><td>09.50</td><td>17.15</td><td>3 dari 3</td></tr><tr><td>8 Oktober 2026</td><td>10.08</td><td>17.30</td><td>2 dari 3</td></tr></tbody></table></div></article>
+        </section>
+      </div>
+    </main>
+    <footer>Youtz Attendance · Demo hanya baca · Tidak terhubung ke akun atau data staf.</footer>
+  </div>
+</body>
+</html>
