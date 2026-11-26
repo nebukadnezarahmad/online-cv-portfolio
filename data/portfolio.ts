@@ -53,6 +53,26 @@ export const projects = [
     ],
   },
   {
+    title: "Portal Desa Rantau Jaya",
+    category: "Freelance & pekerjaan",
+    description:
+      "Website resmi Desa Rantau Jaya yang saya bangun untuk profil desa, berita, katalog UMKM, data penduduk, pengaduan warga, serta dashboard admin.",
+    note: "Preview live · gulir di dalam bingkai untuk menjelajahi.",
+    address: "desa-rantau-jaya.vercel.app",
+    preview: "https://desa-rantau-jaya.vercel.app",
+    demo: false,
+    links: [
+      {
+        href: "https://desa-rantau-jaya.vercel.app",
+        label: "Buka website ↗",
+      },
+      {
+        href: "https://github.com/nebukadnezarahmad/desa-rantau-jaya",
+        label: "Repositori ↗",
+      },
+    ],
+  },
+  {
     title: "Seketika",
     category: "Proyek lomba",
     description:
