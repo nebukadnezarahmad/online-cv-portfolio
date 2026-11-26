@@ -40,9 +40,10 @@ export const projects = [
     category: "Freelance & pekerjaan",
     description:
       "Website resmi Youth Ranger Indonesia yang saya kerjakan untuk profil organisasi, informasi program kepemimpinan, publikasi, dan pendaftaran anggota.",
-    note: "Preview live · gulir di dalam bingkai untuk menjelajahi.",
+    note: "Preview tangkapan layar · website memblokir embed iframe, klik Buka website untuk menjelajahi.",
     address: "youthrangerindonesia.com",
     preview: "https://youthrangerindonesia.com",
+    previewImage: "assets/youthrangerindonesia-preview.jpg",
     demo: false,
     links: [
       {

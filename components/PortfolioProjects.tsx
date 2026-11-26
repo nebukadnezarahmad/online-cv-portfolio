@@ -101,17 +101,30 @@ export default function PortfolioProjects() {
                 </span>
               </div>
               <ProjectVisual>
-                <iframe
-                  src={project.demo ? asset(project.preview) : project.preview}
-                  title={`Preview ${project.demo ? "demo hanya baca" : "live website"} ${project.title}`}
-                  loading="lazy"
-                  sandbox={
-                    project.demo
-                      ? ""
-                      : "allow-scripts allow-same-origin allow-forms allow-popups"
-                  }
-                  referrerPolicy="strict-origin-when-cross-origin"
-                />
+                {"previewImage" in project && project.previewImage ? (
+                  <div
+                    className="screenshot-preview"
+                    style={{ width: "100%", height: "100%" }}
+                  >
+                    <img
+                      src={asset(project.previewImage)}
+                      alt={`Preview website ${project.title}`}
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <iframe
+                    src={project.demo ? asset(project.preview) : project.preview}
+                    title={`Preview ${project.demo ? "demo hanya baca" : "live website"} ${project.title}`}
+                    loading="lazy"
+                    sandbox={
+                      project.demo
+                        ? ""
+                        : "allow-scripts allow-same-origin allow-forms allow-popups"
+                    }
+                    referrerPolicy="strict-origin-when-cross-origin"
+                  />
+                )}
               </ProjectVisual>
               <div className="website-copy">
                 <p className="category">{project.category}</p>
