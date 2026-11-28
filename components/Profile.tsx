@@ -10,16 +10,14 @@ export default function Profile() {
         aria-labelledby="profile-title"
       >
         <div className="hero-copy">
-          <p className="intro">
-            Halo, saya Nezar <span aria-hidden="true">✦</span>
-          </p>
+          <p className="intro">Nebukadnezar Ahmad · Desain, digital, dan kepemimpinan kreatif</p>
           <h1 id="profile-title">
             <span className="hero-line-wrap">
-              <span className="hero-line">Nebukadnezar</span>
+              <span className="hero-line">Ide yang jelas.</span>
             </span>
             <span className="hero-line-wrap">
               <span className="hero-line">
-                Ahmad<span className="name-dot">.</span>
+                Karya yang terasa<span className="name-dot">.</span>
               </span>
             </span>
           </h1>

@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "@/data/portfolio";
 import { asset } from "@/lib/paths";
 import ProjectVisual from "./ProjectVisual";
-import AnatomyShowcase from "./AnatomyShowcase";
 
 const categories = [
   "Semua proyek",
@@ -51,7 +50,6 @@ export default function PortfolioProjects() {
         lainnya saya kerjakan untuk freelance dan pekerjaan. Preview dashboard
         memakai data contoh.
       </p>
-      <AnatomyShowcase />
       <div className="project-toolbar">
         <div
           className="project-filters"

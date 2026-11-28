@@ -6,6 +6,7 @@ import FlowBackground from "@/components/FlowBackground";
 import "./styles/base.css";
 import "./styles/cinematic.css";
 import "./styles/studio.css";
+import "./styles/remodel.css";
 
 export const metadata: Metadata = {
   title: "Nebukadnezar Ahmad | CV & Portofolio",
