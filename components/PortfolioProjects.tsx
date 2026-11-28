@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "@/data/portfolio";
 import { asset } from "@/lib/paths";
+import { motionTokens } from "@/lib/motion-tokens";
 import ProjectVisual from "./ProjectVisual";
 
 const categories = [
@@ -63,7 +64,7 @@ export default function PortfolioProjects() {
               key={label}
               aria-pressed={category === label}
               onClick={() => setCategory(label)}
-              whileTap={reduce ? undefined : { scale: 0.96 }}
+              whileTap={reduce ? undefined : { scale: motionTokens.scale.press }}
             >
               {label}
             </motion.button>
@@ -74,21 +75,22 @@ export default function PortfolioProjects() {
         </p>
       </div>
       <div className="website-grid">
-        <AnimatePresence initial={false} mode="popLayout">
-          {visible.map((project, index) => (
+        <AnimatePresence mode="popLayout">
+          {visible.map((project) => (
             <motion.article
               className="website-card"
               key={project.title}
-              initial={{ opacity: 0, y: 32 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={reduce ? false : { opacity: 0, y: motionTokens.distance.lg }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px 0px -8% 0px" }}
               exit={{
                 opacity: 0,
-                y: -18,
-                transition: { duration: reduce ? 0 : 0.18, delay: 0 },
+                y: reduce ? 0 : -motionTokens.distance.md,
+                transition: { duration: reduce ? 0 : motionTokens.duration.fast },
               }}
               transition={{
-                duration: reduce ? 0 : 0.4,
-                delay: reduce ? 0 : index * 0.04,
+                duration: reduce ? 0 : motionTokens.duration.slow,
+                ease: motionTokens.easing.smooth,
               }}
             >
               <div className="browser-bar">

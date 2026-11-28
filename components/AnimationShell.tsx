@@ -66,9 +66,9 @@ export default function AnimationShell({ children }: { children: ReactNode }) {
         });
         gsap.fromTo(
           ".summary-words > span",
-          { color: "#c0cedf" },
+          { color: "#69809a" },
           {
-            color: "#ffffff",
+            color: "#151718",
             stagger: 0.075,
             ease: "none",
             scrollTrigger: {

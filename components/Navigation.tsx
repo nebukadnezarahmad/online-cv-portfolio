@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import TopLink from "@/components/TopLink";
+import { motionTokens } from "@/lib/motion-tokens";
 
 const links = [
   ["tentang", "Profil"],
@@ -88,24 +89,24 @@ export default function Navigation() {
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((value) => !value)}
-          whileTap={reduce ? undefined : { scale: 0.96 }}
+          whileTap={reduce ? undefined : { scale: motionTokens.scale.press }}
         >
           Menu <span aria-hidden="true">{open ? "×" : "+"}</span>
         </motion.button>
         <a className="header-contact" href="#kontak">
           Hubungi saya ↗
         </a>
-        <AnimatePresence initial={false}>
+        <AnimatePresence initial={false} mode="wait">
           {open && (
             <motion.nav
               key="mobile"
               id="mobile-nav"
               className="mobile-navigation"
               aria-label="Navigasi ponsel"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: reduce ? 0 : 0.25 }}
+              initial={{ opacity: 0, y: reduce ? 0 : -motionTokens.distance.sm }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: reduce ? 0 : -motionTokens.distance.sm }}
+              transition={{ duration: reduce ? 0 : motionTokens.duration.normal, ease: motionTokens.easing.smooth }}
             >
               {items}
             </motion.nav>

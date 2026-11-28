@@ -74,7 +74,7 @@ p { color: var(--muted); }
   letter-spacing: -.085em;
   line-height: .95;
 }
-.hero-line-wrap { overflow: visible; padding: 0 0 .07em; }
+.hero-line-wrap { overflow: hidden; padding: 0 0 .08em; }
 .hero-line { color: #161719; white-space: nowrap; }
 .hero .name-dot { color: var(--accent); }
 .hero-role { margin-top: 32px; color: var(--ink); font-size: clamp(17px, 1.7vw, 23px); font-weight: 500; }
@@ -272,4 +272,5 @@ p { color: var(--muted); }
 }
 @media (prefers-reduced-motion: reduce) {
   .work-image img { transition: none; }
+  .website-card { opacity: 1 !important; transform: none !important; }
 }
